@@ -1,5 +1,5 @@
 # Sochil Network with Friends
-_Enjoying events and activities with friends._
+_The social media platform that makes sure you never attend an event alone._
 
 
 ## Website:
