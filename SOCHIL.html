@@ -12,12 +12,20 @@
 
   <!-- Latest compiled JavaScript -->
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="javascript/search.js"></script>
   <style>
     body{
       background-color: #000000;
     }
     #main_container{
       width = 100%;
+    }
+    .absolute{
+        position: absolute
+    }
+
+    .bottom{
+        bottom: 2.5%
     }
 
     .left{
@@ -67,7 +75,7 @@
 <body>
   <div id="main_container">
     <div id="header">
-      <h1 id="title" class="left">SoChil</h1>
+      <img src="./assets/images/sochil-logo-120x97.png" width=120 height=97 alt="SOCHIL Logo" class="absolute bottom left">
       <button type="button" class="btn" id="login_btn">Log In</button>
     </div>
     <div id="search_div">
@@ -81,7 +89,11 @@
           <span class="input-group-addon">Location:</span>
           <input id="search_location" type="text" class="form-control" name="msg" placeholder="Location">
         </div>
-        <button id="search_btn" type="button" class="btn btn-default">Search</button>
+        <button id="search_btn" type="button" class="btn btn-default" onclick="search('main_table',
+        document.getElementById('search_activity').value,
+        document.getElementById('search_min_age').value,
+        document.getElementById('search_max_age').value,
+        document.getElementById('search_location').value)">Search</button>
     </div>
     <div id="table_div">
       <div id="left">
