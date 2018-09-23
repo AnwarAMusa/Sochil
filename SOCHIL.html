@@ -14,6 +14,7 @@
     <!-- Latest compiled JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 
+    <script src="./javascript/search.js"></script>
     <style>
         body{
       background-color: #000000;
@@ -92,7 +93,12 @@
                 <span class="input-group-addon">Location:</span>
                 <input id="search_location" type="text" class="form-control" name="msg" placeholder="Location">
             </div>
-            <button id="search_btn" type="button" class="btn btn-default" onclick="search()">Search</button>
+            <button id="search_btn" type="button" class="btn btn-default" onclick="search('main_table',
+                document.getElementById('search_activity').value,
+            document.getElementById('search_min_age').value,
+            document.getElementById('search_max_age').value,
+            document.getElementById('search_location').value
+            )">Search</button>
         </div>
         <div id="table_div">
             <div id="left">
